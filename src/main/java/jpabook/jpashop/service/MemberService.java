@@ -13,10 +13,10 @@ import java.util.List;
 public class MemberService {
 
 
-    private MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
 
     @Autowired
-    public void setMemberRepository(MemberRepository memberRepository) {
+    public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
