@@ -14,7 +14,7 @@ import java.util.List;
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
 public class MemberService {
-    
+
     private final MemberRepository memberRepository;
 
     /**
