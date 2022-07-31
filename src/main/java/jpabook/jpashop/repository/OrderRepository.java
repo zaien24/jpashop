@@ -42,7 +42,7 @@ public class OrderRepository {
         }
 
         //회원 이름 검색
-        if (StringUtils.hasText(orderSearch.getMemberName())) {
+        /*if (StringUtils.hasText(orderSearch.getMemberName())) {
             if (isFirstCondition) {
                 jpql += " where";
                 isFirstCondition = false;
@@ -50,7 +50,7 @@ public class OrderRepository {
                 jpql += " and";
             }
             jpql += " m.name like : name";
-        }
+        }*/
 
         TypedQuery<Order> query = em.createQuery(jpql, Order.class)
                 .setMaxResults(1000);
@@ -58,9 +58,9 @@ public class OrderRepository {
         if (orderSearch.getOrderStatus() != null) {
             query = query.setParameter("status", orderSearch.getOrderStatus());
         }
-        if (StringUtils.hasText(orderSearch.getMemberName())) {
+        /*if (StringUtils.hasText(orderSearch.getMemberName())) {
             query = query.setParameter("name", orderSearch.getMemberName());
-        }
+        }*/
 
         return query.getResultList();
     }
@@ -83,11 +83,11 @@ public class OrderRepository {
         }
 
         //회원 이름 검색
-        if (StringUtils.hasText(orderSearch.getMemberName())) {
+        /*if (StringUtils.hasText(orderSearch.getMemberName())) {
             Predicate name =
                     cb.like(m.get("name"), "%" + orderSearch.getMemberName() + "%");
             criteria.add(name);
-        }
+        }*/
 
         cq.where(cb.and(criteria.toArray(new Predicate[criteria.size()])));
         TypedQuery<Order> query = em.createQuery(cq).setMaxResults(1000);
