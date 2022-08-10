@@ -86,7 +86,7 @@ public class InitDb {
             delivery.setAddress(member.getAddress());
             return delivery;
         }
- 
+
         private Book createBook(String name, int price, int stockQuantity) {
             Book book1 = new Book();
             book1.setName(name);
