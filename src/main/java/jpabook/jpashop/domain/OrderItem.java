@@ -48,7 +48,7 @@ public class OrderItem {
     //==조회 로직==//
 
     /**
-     * 주문상품 전체 가격 조회 
+     * 주문상품 전체 가격 조회
      * @return
      */
     public int getTotalPrice() {
