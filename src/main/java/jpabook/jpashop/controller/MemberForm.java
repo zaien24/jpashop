@@ -1,4 +1,4 @@
-package jpabook.jpashop.domain;
+package jpabook.jpashop.controller;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
@@ -13,5 +13,5 @@ public class MemberForm {
 
     private String city;
     private String street;
-    private String zipcode
+    private String zipcode;
 }
