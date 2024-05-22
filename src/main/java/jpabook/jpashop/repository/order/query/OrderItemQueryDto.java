@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 @Data
-public class OrderItemQUeryDto {
+public class OrderItemQueryDto {
 
     @JsonIgnore
     private Long orderId;
@@ -12,7 +12,7 @@ public class OrderItemQUeryDto {
     private int orderPrice;
     private int count;
 
-    public OrderItemQUeryDto(Long orderId, String itemName, int orderPrice, int count) {
+    public OrderItemQueryDto(Long orderId, String itemName, int orderPrice, int count) {
         this.orderId = orderId;
         this.itemName = itemName;
         this.orderPrice = orderPrice;

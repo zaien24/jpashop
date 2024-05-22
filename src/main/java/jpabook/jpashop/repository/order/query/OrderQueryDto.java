@@ -15,7 +15,7 @@ public class OrderQueryDto {
     private LocalDateTime orderDate;
     private OrderStatus orderStatus;
     private Address address;
-    private List<OrderItemQUeryDto> orderItems;
+    private List<OrderItemQueryDto> orderItems;
 
     public OrderQueryDto(Long orderId, String name, LocalDateTime orderDate, OrderStatus orderStatus, Address address) {
         this.orderId = orderId;
